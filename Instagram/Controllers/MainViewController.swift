@@ -9,10 +9,12 @@
 import UIKit
 import Parse
 
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var posts: [Post] = []
     let refreshControl = UIRefreshControl()
     let HeaderViewIdentifier = "TableViewHeaderView"
+    
+    
     @IBOutlet var myTableView: UITableView!
     
     override func viewDidLoad() {
@@ -23,18 +25,33 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         myTableView.dataSource = self
         myTableView.rowHeight = UITableViewAutomaticDimension
         myTableView.estimatedRowHeight = 300
-       // myTableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: HeaderViewIdentifier)
+        myTableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: HeaderViewIdentifier)
         pullDownPosts()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
         return posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderViewIdentifier) as! UITableViewHeaderFooterView
+        header.textLabel?.text = posts[section].author.username
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myTableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostCell
         cell.selectionStyle = .none
-        let post = posts[indexPath.row]
+        // let post = posts[indexPath.row]
+        let post = posts[indexPath.section]
         cell.captionText.text = post.caption
         cell.indexpath = indexPath
         if let imageFile : PFFile = post.media {
@@ -50,22 +67,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         return cell
     }
-    
- /*   func numberOfSections(in tableView: UITableView) -> Int {
-        return posts.count
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
-    } */
-    
-  /*  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = myTableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderViewIdentifier) as! UITableViewHeaderFooterView
-        let post = posts[section]
-        header.textLabel?.text = post.author.username
-        return header
-    } */
-    
     
     @IBAction func logOutActionButton(_ sender: Any) {
         NotificationCenter.default.post(name: NSNotification.Name("didLogOut"), object: nil)
@@ -100,7 +101,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print(error.debugDescription)
             }
         })
-       // myTableView.reloadData()
 }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
