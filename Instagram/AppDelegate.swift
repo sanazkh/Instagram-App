@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if PFUser.current() != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "navigationControllerHome")
+            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "here")
         }
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name("didLogOut"), object: nil, queue: OperationQueue.main, using: {_ in

@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram/Controllers/LoginViewController.swift"
-            timestampString = "560189048.572768"
+            timestampString = "560284741.900701"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram/Controllers/MainViewController.swift"
-            timestampString = "560189048.572854"
+            timestampString = "560284741.9007829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "logOutActionButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram/Controllers/MainViewController.swift"
-            timestampString = "560189048.572908"
+            timestampString = "560284741.901224"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "logOutActionButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram/Controllers/MainViewController.swift"
-            timestampString = "560189048.572952"
+            timestampString = "560284741.901498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "MainViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -218,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram/Controllers/ComposeViewController.swift"
-            timestampString = "560189048.573"
+            timestampString = "560284741.901769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -234,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram/Controllers/ComposeViewController.swift"
-            timestampString = "560189048.5733581"
+            timestampString = "560284741.901837"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -246,11 +246,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram/Controllers/ComposeViewController.swift"
-            timestampString = "560189048.573634"
+            timestampString = "560284741.901898"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -262,11 +262,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram/Controllers/ComposeViewController.swift"
-            timestampString = "560189048.573879"
+            timestampString = "560284741.901948"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -275,14 +275,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Instagram.ComposeViewController.shareButtonAction(Any) -&gt; ()"
                   moduleName = "Instagram"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sanazk/Desktop/Codepath/Instagram/Instagram/Controllers/ComposeViewController.swift"
-                  timestampString = "560189048.781849"
+                  timestampString = "560201130.853892"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -290,14 +290,14 @@
                   offsetFromSymbolStart = "337">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 () -&gt; (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Instagram.ComposeViewController.shareButtonAction(Any) -&gt; ()"
                   moduleName = "Instagram"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sanazk/Desktop/Codepath/Instagram/Instagram/Controllers/ComposeViewController.swift"
-                  timestampString = "560189048.783605"
+                  timestampString = "560201130.855583"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -305,14 +305,14 @@
                   offsetFromSymbolStart = "59">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 () -&gt; (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Instagram.ComposeViewController.shareButtonAction(Any) -&gt; ()"
                   moduleName = "Instagram"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sanazk/Desktop/Codepath/Instagram/Instagram/Controllers/ComposeViewController.swift"
-                  timestampString = "560189048.785247"
+                  timestampString = "560201130.857204"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "20"
@@ -329,7 +329,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram/Models/Post.swift"
-            timestampString = "560189048.574113"
+            timestampString = "560284741.901998"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -345,7 +345,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram/Controllers/ComposeViewController.swift"
-            timestampString = "560189048.574165"
+            timestampString = "560284741.902045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -357,11 +357,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram/Controllers/ComposeViewController.swift"
-            timestampString = "560189048.574397"
+            timestampString = "560284741.902095"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -373,11 +373,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Instagram/Controllers/ComposeViewController.swift"
-            timestampString = "560189048.574613"
+            timestampString = "560284741.902141"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
@@ -386,14 +386,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 () -&gt; (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Instagram.ComposeViewController.shareButtonAction(Any) -&gt; ()"
                   moduleName = "Instagram"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sanazk/Desktop/Codepath/Instagram/Instagram/Controllers/ComposeViewController.swift"
-                  timestampString = "560189048.797718"
+                  timestampString = "560201130.870402"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
@@ -401,14 +401,14 @@
                   offsetFromSymbolStart = "986">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 () -&gt; (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Instagram.ComposeViewController.shareButtonAction(Any) -&gt; ()"
                   moduleName = "Instagram"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sanazk/Desktop/Codepath/Instagram/Instagram/Controllers/ComposeViewController.swift"
-                  timestampString = "560189048.799391"
+                  timestampString = "560201130.872015"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"

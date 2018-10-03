@@ -63,7 +63,7 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : Any]) {
         // Get the image captured by the UIImagePickerController
-        let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+     //   let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
         imageFrame.image = editedImage
         dismiss(animated: true, completion: nil)
@@ -73,6 +73,8 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
 
 }

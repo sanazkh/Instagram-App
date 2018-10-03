@@ -7,32 +7,106 @@
 //
 
 import UIKit
+import Parse
 
-class MainViewController: UIViewController {
-
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var posts: [Post] = []
+    let refreshControl = UIRefreshControl()
+    let HeaderViewIdentifier = "TableViewHeaderView"
+    @IBOutlet var myTableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
+        myTableView.insertSubview(refreshControl, at: 0)
+        myTableView.delegate = self
+        myTableView.dataSource = self
+        myTableView.rowHeight = UITableViewAutomaticDimension
+        myTableView.estimatedRowHeight = 300
+       // myTableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: HeaderViewIdentifier)
+        pullDownPosts()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = myTableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostCell
+        cell.selectionStyle = .none
+        let post = posts[indexPath.row]
+        cell.captionText.text = post.caption
+        cell.indexpath = indexPath
+        if let imageFile : PFFile = post.media {
+            imageFile.getDataInBackground { (data, error) in
+                if (error != nil) {
+                    cell.imageViewCell.image = UIImage(named: "image_placeholder.png")!
+                    print(error?.localizedDescription)
+                }
+                else {
+                    cell.imageViewCell.image = UIImage(data: data!)
+                }
+            }
+        }
+        return cell
+    }
+    
+ /*   func numberOfSections(in tableView: UITableView) -> Int {
+        return posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    } */
+    
+  /*  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = myTableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderViewIdentifier) as! UITableViewHeaderFooterView
+        let post = posts[section]
+        header.textLabel?.text = post.author.username
+        return header
+    } */
+    
+    
     @IBAction func logOutActionButton(_ sender: Any) {
         NotificationCenter.default.post(name: NSNotification.Name("didLogOut"), object: nil)
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+       
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc func refreshControlAction(_ refreshControl: UIRefreshControl) {
+        pullDownPosts()
+        
     }
-    */
 
+    func pullDownPosts() {
+        let query = Post.query()
+        query?.order(byDescending: "createdAt")
+        query?.includeKey("author")
+        query?.includeKey("createdAt")
+        query?.limit = 20
+        
+        // Fetch data asynchronously
+        query?.findObjectsInBackground(block: { (posts, error) in
+            if let posts = posts {
+                self.posts = posts as! [Post]
+                self.myTableView.reloadData()
+                self.refreshControl.endRefreshing()
+            }
+            else {
+                print(error.debugDescription)
+            }
+        })
+       // myTableView.reloadData()
+}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? PostCell {
+            let detailView = segue.destination as! DetailViewController
+            detailView.post = posts[(cell.indexpath?.row)!]
+        }
+    }
 }

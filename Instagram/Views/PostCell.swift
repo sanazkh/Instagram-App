@@ -10,6 +10,11 @@ import UIKit
 
 class PostCell: UITableViewCell {
 
+    
+    @IBOutlet var captionText: UITextView!
+    @IBOutlet var imageViewCell: UIImageView!
+    var indexpath: IndexPath?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
