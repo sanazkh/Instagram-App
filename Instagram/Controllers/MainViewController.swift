@@ -24,7 +24,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.rowHeight = UITableViewAutomaticDimension
-        myTableView.estimatedRowHeight = 300
+        myTableView.estimatedRowHeight = 450
         myTableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: HeaderViewIdentifier)
         pullDownPosts()
     }
@@ -106,7 +106,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? PostCell {
             let detailView = segue.destination as! DetailViewController
-            detailView.post = posts[(cell.indexpath?.row)!]
+            detailView.post = posts[(cell.indexpath?.section)!]
         }
     }
 }

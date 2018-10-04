@@ -18,6 +18,7 @@
 		A3E09958216343C900151D65 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E09957216343C900151D65 /* PostCell.swift */; };
 		A3E0995B216343DE00151D65 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E0995A216343DE00151D65 /* Post.swift */; };
 		A3E0995D2165374400151D65 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E0995C2165374400151D65 /* DetailViewController.swift */; };
+		A3E0995F2165A4AC00151D65 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E0995E2165A4AC00151D65 /* ProfileViewController.swift */; };
 		A5F30867F2AE3B1DE5134B34 /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F89EA9B4C44CE94A2565B13 /* Pods_Instagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		A3E09957216343C900151D65 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		A3E0995A216343DE00151D65 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A3E0995C2165374400151D65 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A3E0995E2165A4AC00151D65 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DB73F40310397C047A54B060 /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				A3E0995321632EDC00151D65 /* MainViewController.swift */,
 				A3E099552163357B00151D65 /* ComposeViewController.swift */,
 				A3E0995C2165374400151D65 /* DetailViewController.swift */,
+				A3E0995E2165A4AC00151D65 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				A3E0993B2162CD2300151D65 /* AppDelegate.swift in Sources */,
 				A3E0995421632EDC00151D65 /* MainViewController.swift in Sources */,
 				A3E0995B216343DE00151D65 /* Post.swift in Sources */,
+				A3E0995F2165A4AC00151D65 /* ProfileViewController.swift in Sources */,
 				A3E09958216343C900151D65 /* PostCell.swift in Sources */,
 				A3E0995D2165374400151D65 /* DetailViewController.swift in Sources */,
 			);
